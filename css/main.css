@@ -1,9 +1,13 @@
+html {
+	font-size: 16px;
+}
+
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 16px;
+	font-size: 1em;
 }
 
 .container{
@@ -23,86 +27,68 @@ h4 {
 	text-transform: uppercase;
 	font-weight: 700;
 }
-h1 {
-	font-size: 1.875em;
-	width: 100%;
-}
-h2 {
-    font-size: 1.5em;
-}
-h3 {
-	font-size: 1.125em;
-}
-h4 {
-	font-size: 0.75em;
-}
 
 p {
 	font-size: 0.875em;
 	line-height: 1.3125em;
 }
 
-/*The widths are in a percentage!*/
+ul {
+	margin: 0;
+}
+
 header {
-	height: auto;
 	border-bottom: 3px solid #77a466;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
 	flex-flow: row wrap;
+	text-align: center;
 }
 
 header h1 {
+	font-size: 1.875em;
 	margin: 0;
 	padding-top: 40px;
 	padding-bottom: 10px;
-	display: flex;
 	border-bottom: 3px solid #77a466;
-	justify-content: center;
-	align-items: center;
+	width: 100%;
 }
+
 header h1 span {
 	color: #77a466;
-	display: flex;
 }
 
 header nav {
-	padding: 15px 0;
-	display: flex;
+	padding: 20px 0;
+	width: 100%;
 }
+
 header nav ul {
 	margin: 0;
 	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: column wrap;
 }
+
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 0.875em;
-	padding: 10px 10px;
-	display: flex;
-	flex-flow: row wrap;
+	padding: 10px 0;
+	list-style: none;
 }
+
 header nav ul li a{
 	text-decoration: none;
 	color:#77a466;
 }
 
-/*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: column wrap;
-}
-
-.main-image {
-	height: auto;
+	flex-flow: row wrap;
 }
 
 .main-image img {
@@ -110,14 +96,11 @@ header nav ul li a{
 	border-bottom: 3px solid #77a466;
 }
 
-.main-title {
-	width: 100%;
-}
-
 .main-title h3 {
 	text-align: left;
 	padding: 5px 0;
 	color: #77a466;
+	font-size: 1.125em;
 }
 
 .main-title p {
@@ -130,12 +113,7 @@ header nav ul li a{
 .section-two,
 .section-three {
 	width: 100%;
-	height: auto;
 	border-top: 1px solid #eee;
-}
-
-.section-one, .section-two, .section-three h4 {
-	padding: 10px 0;
 }
 
 .menu {
@@ -158,7 +136,6 @@ header nav ul li a{
 	line-height: 1.5em;
 }
 
-/*The widths are in a percentage!*/
 footer {
 	border-top: 3px solid #eee;
 	width: 100%;
@@ -173,4 +150,50 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+/***TABLET & DESKTOP VIEW***/
+@media all and (min-width:768px) {
+    /* Tablet styles here */
+    .bottom-section {
+    	justify-content: space-between;
+    	align-items: flex-start;
+    	border-top: 1px solid #eee;
+    }
+
+    .section-one,
+    .section-two,
+    .section-three {
+    	border-top: none;
+    	flex-basis: 30%;
+    }
+
+    .section-two {
+    	border-left: 1px solid #eee;
+    	border-right: 1px solid #eee;
+    	padding: 0 20px;
+    }
+}
+ 
+@media all and (min-width:1200px) {
+    header {
+    	justify-content: space-between;
+    }
+
+    header h1 {
+    	width: 30%;
+    	padding: 0;
+    	border-bottom: none;
+    	text-align: left;
+    }
+
+    header nav {
+    	width: 40%;
+    }
+
+    header nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+ 
 }
